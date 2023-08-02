@@ -45,14 +45,17 @@ class FarmController extends Controller
      */
     public function show(string $id)
     {
+        $farm = farm::find($id);
         return view('farm.show', compact('farm'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
+        $farm = farm::find($id);
         return view('farm.edit', compact('farm'));
     }
 
