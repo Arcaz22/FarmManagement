@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->String("nama_kandang");
             $table->String("kepala_kandang");
-            $table->string("status_kandang")->default("active");
+            // $table->String("status_kandang");
+            $table->enum("status_kandang", ['panen', 'chick in', 'persiapan kandang','cuci kandang','kosong'])->default('kosong');
             $table->timestamps();
         });
     }
