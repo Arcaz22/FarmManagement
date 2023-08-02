@@ -9,9 +9,7 @@ class farm extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'kepala_kandang',
-        'nama_kandang',
-        'status kandang'
+    protected $guarded = [
+        'id'
     ];
 }
