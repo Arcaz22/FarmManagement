@@ -28,19 +28,19 @@ class FarmController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    $data = $request->validate([
-        'nama_kandang' => 'required|max:255',
-        'kepala_kandang' => 'required|max:255',
-        'status_kandang' => 'required|max:255',
-        'kapasitas_kandang' => 'required|integer',
-        'lokasi_kandang' => 'required|max:255',
-    ]);
+    {
+        $data = $request->validate([
+            'nama_kandang' => 'required|max:255',
+            'kepala_kandang' => 'required|max:255',
+            'status_kandang' => 'required|max:255',
+            'kapasitas_kandang' => 'required|integer',
+            'lokasi_kandang' => 'required|max:255',
+        ]);
 
-    Farm::create($data);
+        Farm::create($data);
 
-    return redirect()->route('farm.index')->with('success', 'Farm created successfully.');
-}
+        return redirect()->route('farm.index')->with('success', 'Farm created successfully.');
+    }
 
     /**
      * Display the specified resource.
@@ -73,9 +73,9 @@ class FarmController extends Controller
             'kapasitas_kandang' => 'required|integer',
             'lokasi_kandang' => 'required|max:255',
         ]);
-    
+
         $farm->update($data);
-    
+
         return redirect()->route('farm.index')->with('success', 'farm updated successfully.');
     }
 

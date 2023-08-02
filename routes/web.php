@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('dashboard', function () {
+    return view('dashboard');
+});
+
+
 Route::get('/farm/search', [FarmController::class, 'search'])->name('farm.search');
 Route::get('/farm/filter', [FarmController::class, 'filter'])->name('farm.filter');
 Route::resource('farm', FarmController::class);
