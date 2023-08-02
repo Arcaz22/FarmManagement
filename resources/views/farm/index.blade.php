@@ -7,15 +7,17 @@
     <table class="table">
         <thead>
             <tr>
+                <th>NO</th>
                 <th>Nama Kandang</th>
                 <th>Kepala Kandang</th>
                 <th>Status Kandang</th>
-                <th>Aksi</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach ($farm as $management)
             <tr>
+                <th scope="row">{{ $loop->iteration }}</th>
                 <td>{{ $management->nama_kandang }}</td>
                 <td>{{ $management->kepala_kandang }}</td>
                 <td>{{ $management->status_kandang }}</td>
