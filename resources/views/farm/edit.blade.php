@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('content')
+@section('container')
 <div class="container">
     <h1>Edit Kandang</h1>
     <form action="{{ route('farm.update', $kandang->id) }}" method="post">

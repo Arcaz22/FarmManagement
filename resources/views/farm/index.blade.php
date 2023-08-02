@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('content')
+@section('container')
 <div class="container">
-    <h1>Daftar Kandang</h1>
+    <h1>Farm Management</h1>
     <a href="{{ route('farm.create') }}" class="btn btn-primary mb-2">Tambah Kandang Baru</a>
     <table class="table">
         <thead>

@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('content')
+@section('container')
 <div class="container">
     <h1>Tambah Kandang Baru</h1>
     <form action="{{ route('farm.store') }}" method="post">
