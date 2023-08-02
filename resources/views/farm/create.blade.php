@@ -32,11 +32,12 @@
                     </div>
                     <div class="form-group mt-1">
                         <label for="kapasitas_kandang">Kapasitas Kandang</label>
-                        <input type="text" class="form-control" id="kapasitas_kandang" name="kapasitas_kandang" required>
+                        <input type="text" class="form-control" id="kapasitas_kandang" name="kapasitas_kandang"
+                            required>
                     </div>
                     <div class="form-group mt-1">
                         <label for="lokasi_kandang">Lokasi Kandang</label>
-                        <input type="text" class="form-control" id="lokasi_kandang" name="lokasi_kandang" required>
+                        <textarea type="text" class="form-control" id="lokasi_kandang" name="lokasi_kandang" required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

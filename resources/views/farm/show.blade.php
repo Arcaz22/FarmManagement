@@ -1,34 +1,35 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="row align-items-center justify-content-around">
-        <h1 class="col-4">Farm Management</h1>
-        <div class="col">
-            <div class="row justify">
-                <div class="col">
-                    <a href="" class="btn btn-light">Search</a>
-                </div>
-                <div class="col">
-                    <a href="" class="btn btn-light">Filter</a>
-                </div>
-                <div class="col">
-                    {{-- <a href="{{ route('farm.create') }}" class="btn btn-primary" style="border-radius: 30px"><i class="bi bi-plus"></i>Tambah Kandang</a> --}}
-                    @include('farm.create')
-                </div>
+    <div class="row align-items-center mb-3">
+        <a href="{{ route('farm.index') }}" class="col-1 btn btn-light"><i class="bi bi-arrow-left"></i></a>
+        <h1 class="col">Farm Management</h1>
+    </div>
+    <div class="row align-items-center mb-3">
+        <a href="" class="col-2 btn btn-primary mx-3">Informasi Kandang</a>
+        <a href="" class="col-2 btn btn-light mx-3">Report</a>
+    </div>
+    {{-- Informasi Kandang --}}
+    <div class="card table mb-5">
+        <div class="row">
+            <div class="col-3 fw-bold">
+                <p class="px-3 mt-3">Nama Kandang</p>
+                <p class="px-3 mt-3">Kepala Kandang</p>
+                <p class="px-3 mt-3">Status Kandang</p>
+                <p class="px-3 mt-3">Kapasitas Kandang</p>
+                <p class="px-3 mt-3">Lokasi Kandang</p>
+            </div>
+            <div class="col">
+                <p class="px-3 mt-3">{{ $farm->nama_kandang }}</p>
+                <p class="px-3 mt-3">{{ $farm->kepala_kandang }}</p>
+                <p class="px-3 mt-3">{{ $farm->status_kandang }}</p>
+                <p class="px-3 mt-3">{{ $farm->kapasitas_kandang }}</p>
+                <p class="px-3 mt-3">{{ $farm->lokasi_kandang }}</p>
             </div>
         </div>
     </div>
-
-    <ul class="list-group">
-        <li class="list-group-item"><strong>Nama Kandang:</strong> {{ $farm->nama_kandang }}</li>
-        <li class="list-group-item"><strong>Kepala Kandang:</strong> {{ $farm->kepala_kandang }}</li>
-        <li class="list-group-item"><strong>Status Kandang:</strong> {{ $farm->status_kandang }}</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-    </ul>
-
-    <p></p>
-    <p></p>
-    <p></p>
-    <a href="{{ route('farm.index') }}" class="btn btn-secondary">Kembali</a>
+    <div class="row justify-content-end">
+        <a href="{{ route('farm.index') }}" class="col-1 btn btn-secondary mx-2">Kembali</a>
+        <a href="{{ route('farm.edit', $farm->id) }}" class="col-1 btn btn-primary">Edit</a>
+    </div>
 @endsection
