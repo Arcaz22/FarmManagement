@@ -1,3 +1,10 @@
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
+
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahKandang">Tambah
     Kandang</button>
 {{-- Tambah Data --}}
@@ -17,7 +24,14 @@
                     </div>
                     <div class="form-group">
                         <label class="fw-bold mb-2" for="kepala_kandang">Kepala Kandang</label>
-                        <input type="text" class="mb-3 form-control" id="kepala_kandang" name="kepala_kandang" required>
+                        <select name="kepala_kandang" id="kepala_kandang" class="form-select">
+                            <option selected disabled>Silakan pilih kepala kandang</option>
+                            <option value="Georgia Anatasya">Georgia Anatasya</option>
+                            <option value="Aladdin bin Slamet">Aladdin bin Slamet</option>
+                            <option value="Dwina Insani">Dwina Insani</option>
+                            <option value="Dimas Nallando Putra">Dimas Nallando Putra</option>
+                            <option value="Muhammad Besari">Muhammad Besari</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label class="fw-bold mb-2" for="status_kandang">Status Kandang</label>
@@ -37,7 +51,8 @@
                     </div>
                     <div class="form-group">
                         <label class="fw-bold mb-2" for="lokasi_kandang">Lokasi Kandang</label>
-                        <textarea type="text" class="mb-3 form-control" id="lokasi_kandang" name="lokasi_kandang" required></textarea>
+                        <textarea type="text" class="mb-3 form-control" id="lokasi_kandang" name="lokasi_kandang"
+                            required></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0">
