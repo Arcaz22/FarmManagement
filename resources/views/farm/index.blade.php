@@ -4,7 +4,7 @@
     <div class="row align-items-center mb-3">
         <h1 class="col-4">Farm Management</h1>
         <div class="col">
-            <div class="row justify-content-around">
+            <div class="row">
                 <div class="col">
                     <form action="{{ route('farm.search') }}" method="GET" class="mb-3">
                         <div class="input-group">
@@ -14,35 +14,7 @@
                     </form>
                 </div>
                 <div class="col">
-                    <form action="{{ route('farm.filter') }}" method="GET" class="mb-3">
-                        <div class="row">
-                            <div class="col-md-4 mb-2">
-                                <label for="status_kandang">Status Kandang:</label>
-                                <select name="status_kandang" id="status_kandang" class="form-control">
-                                    <option value="">Semua Status</option>
-                                    <option value="panen">Panen</option>
-                                    <option value="chick in">Chick In</option>
-                                    <option value="persiapan kandang">Persiapan Kandang</option>
-                                    <option value="cuci kandang">Cuci Kandang</option>
-                                    <option value="kosong">Kosong</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <label for="kepala_kandang">Kepala Kandang:</label>
-                                <select name="kepala_kandang" id="kepala_kandang" class="form-control">
-                                    <option value="">Semua Kepala Kandang</option>
-                                    <option value="Georgia Anatasya">Georgia Anatasya</option>
-                                    <option value="Aladdin bin Slamet">Aladdin bin Slamet</option>
-                                    <option value="Dwina Insani">Dwina Insani</option>
-                                    <option value="Dimas Nallando Putra">Dimas Nallando Putra</option>
-                                    <option value="Muhammad Besari">Muhammad Besari</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary mt-4">Filter</button>
-                            </div>
-                        </div>
-                    </form>
+                    @include('farm.filter')
                 </div>
                 <div class="col">
                     @include('farm.create')
@@ -76,7 +48,7 @@
                                 <li><a href="{{ route('farm.show', $management->id) }}" class="dropdown-item">Detail</a>
                                 </li>
                                 {{-- Edit Data Kandang --}}
-                                <li>@include('farm.edit')</li>
+                                <li><a href="{{ route('farm.edit', $management->id) }}" class="dropdown-item">Edit</a></li>
                                 <li>
                                     <form action="{{ route('farm.destroy', $management->id) }}" method="post"
                                         class="d-inline">

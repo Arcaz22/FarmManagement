@@ -10,21 +10,39 @@
         <a href="" class="col-2 btn btn-light mx-3">Report</a>
     </div>
     {{-- Informasi Kandang --}}
-    <div class="card table mb-5">
-        <div class="row">
-            <div class="col-3 fw-bold">
-                <p class="px-3 mt-3">Nama Kandang</p>
-                <p class="px-3 mt-3">Kepala Kandang</p>
-                <p class="px-3 mt-3">Status Kandang</p>
-                <p class="px-3 mt-3">Kapasitas Kandang</p>
-                <p class="px-3 mt-3">Lokasi Kandang</p>
+    <div class="card table my-5 px-3">
+        <div class="mt-3 row">
+            <label for="nama_kandang" class="col-sm-3 col-form-label fw-bold">Nama Kandang</label>
+            <div class="col-sm-9">
+                <input type="text" readonly class="form-control-plaintext" id="nama_kandang" name="nama_kandang"
+                    value="{{ $farm->nama_kandang }}">
             </div>
-            <div class="col">
-                <p class="px-3 mt-3">{{ $farm->nama_kandang }}</p>
-                <p class="px-3 mt-3">{{ $farm->kepala_kandang }}</p>
-                <p class="px-3 mt-3 text-capitalize">{{ $farm->status_kandang }}</p>
-                <p class="px-3 mt-3">{{ $farm->kapasitas_kandang }}</p>
-                <p class="px-3 mt-3">{{ $farm->lokasi_kandang }}</p>
+        </div>
+        <div class="mt-3 row">
+            <label for="kepala_kandang" class="col-sm-3 col-form-label fw-bold">Kepala Kandang</label>
+            <div class="col-sm-9">
+                <input type="text" readonly class="form-control-plaintext" id="kepala_kandang" name="kepala_kandang"
+                    value="{{ $farm->kepala_kandang }}">
+            </div>
+        </div>
+        <div class="mt-3 row">
+            <label for="status_kandang" class="col-sm-3 col-form-label fw-bold">Status Kandang</label>
+            <div class="col-sm-9">
+                <input type="text" readonly class="form-control-plaintext text-capitalize" id="status_kandang" name="status_kandang"
+                    value="{{ $farm->status_kandang }}">
+            </div>
+        </div>
+        <div class="mt-3 row">
+            <label for="kapasitas_kandang" class="col-sm-3 col-form-label fw-bold">Kapasitas Kandang</label>
+            <div class="col-sm-9">
+                <input type="text" readonly class="form-control-plaintext" id="kapasitas_kandang" name="kapasitas_kandang"
+                    value="{{ $farm->kapasitas_kandang }}">
+            </div>
+        </div>
+        <div class="mt-3 row">
+            <label for="lokasi_kandang" class="col-sm-3 col-form-label fw-bold">Lokasi Kandang</label>
+            <div class="col-sm-9">
+                <textarea readonly class="form-control-plaintext" id="lokasi_kandang" name="lokasi_kandang">{{ $farm->lokasi_kandang }}</textarea>
             </div>
         </div>
     </div>
