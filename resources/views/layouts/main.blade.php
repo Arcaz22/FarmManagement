@@ -9,8 +9,8 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   {{-- bootstrap icons --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  {{-- My Style --}}
-  <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+  {{-- font awesome icons --}}
+  <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
   {{-- Logo Web --}}
   <link href="/img/galea-logo.png" rel="shortcut icon">
 
