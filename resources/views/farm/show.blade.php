@@ -22,7 +22,7 @@
             <div class="col">
                 <p class="px-3 mt-3">{{ $farm->nama_kandang }}</p>
                 <p class="px-3 mt-3">{{ $farm->kepala_kandang }}</p>
-                <p class="px-3 mt-3">{{ $farm->status_kandang }}</p>
+                <p class="px-3 mt-3 text-capitalize">{{ $farm->status_kandang }}</p>
                 <p class="px-3 mt-3">{{ $farm->kapasitas_kandang }}</p>
                 <p class="px-3 mt-3">{{ $farm->lokasi_kandang }}</p>
             </div>
